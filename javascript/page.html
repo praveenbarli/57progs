@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <h1>Char count</h1>
+        <script>
+            function callme()
+            {
+                alert("Hi Jeeva!");
+            }
+            //returns the count of characters in the input text field
+            function getCharCount()
+            {
+                name = document.getElementById('inp').value;
+                //alert("input string value: " + name);
+                document.getElementById("output").innerText = name.length;
+            }
+            //since javascript string does not end with '\0' like c language the
+            // following method to find string length is not feasible, instead rely on str.length property
+            function getCount(str)
+            {
+                for(i = 0; i < str.charAt(i) != '\0'; i++)
+                {
+
+                }
+                return i+1;
+            }
+        </script>
+    </head>
+    <body>
+        Enter your name: <input type="text" id="inp" onkeyup="getCharCount()"/>
+        <br/>
+        Your name has <label id="output">0</label> characters.
+        <br/><br/>
+        <input type ="button" value="submit" onclick="callme()"/>
+
+    </body>
+</html>
